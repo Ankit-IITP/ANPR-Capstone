@@ -78,13 +78,15 @@ Then open `http://127.0.0.1:5000` in your browser.
 - Handle OCR under varied lighting and plate formats
 - Deliver a clean and professional frontend experience
 
-## ✨ Team Members (Group 83 - IIT Patna)
+## 🤝 Contributors (Group 83 - IIT Patna)
 
-- Ankit Kumar Singh
-- Aman Kumar Singh
-- Ayush Kumar Singh
-- Bablu Kumar Singh
-- Ayush Kumar Singh
+Thanks to the team members who made this project possible:
+
+- [Ankit Kumar Singh](https://github.com/Ankit-IITP) — *Lead Developer, Frontend, Backend, Model Integration*
+- Aman Kumar Singh — *Image Processing, OCR Testing*
+- Ayush Kumar Singh — *Core Developer, Debugger, Documentation, Dataset Management*
+- Bablu Kumar Singh — *UI/UX, Report Writing*
+- Ayush Kumar Singh - *Research analyst*
 
 ## 📄 License
 
