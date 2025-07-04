@@ -84,6 +84,7 @@ Then open `http://127.0.0.1:5000` in your browser.
 - Aman Kumar Singh
 - Ayush Kumar Singh
 - Bablu Kumar Singh
+- Ayush Kumar Singh
 
 ## 📄 License
 
