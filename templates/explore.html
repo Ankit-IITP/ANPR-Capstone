@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Explore{% endblock %}
+{% block content %}
+  <div class="section">
+    <h2>Objectives & Scope</h2>
+    <p>Detect license plates from static and live images; extract readable alphanumeric content; support Indian and foreign formats; and display real-time recognition in a user-friendly web interface.</p>
+  </div>
+  <div class="section">
+    <h2>Implementation</h2>
+    <p>The final implementation integrates SSD MobileNet for detection, EasyOCR for character recognition, and Flask for web interfacing. Users can upload images or activate a live camera feed to run detections, which are rendered dynamically on the website.</p>
+  </div>
+  <div class="section">
+    <h2>Challenges & Solutions</h2>
+    <ul>
+      <li>OCR issues on low-quality images resolved using EasyOCR</li>
+      <li>Live detection and web sync handled using Python threading</li>
+      <li>Foreign plate formats supported by relaxing character filters</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>Conclusion</h2>
+    <p>This project demonstrated an end-to-end real-time license plate detection system with web access and camera support. It reflects strong technical understanding and readiness for deployment in practical applications.</p>
+  </div>
+{% endblock %}

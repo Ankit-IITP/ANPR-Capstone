@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic License Plate Recognition</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2c3e50;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1a237e, #0d47a1);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        
+        .logo-container {
+            margin: 20px auto;
+            text-align: center;
+        }
+        
+        .logo-container img {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 15px rgba(255,255,255,0.3);
+            object-fit: contain;
+            background-color: white;
+            padding: 5px;
+        }
+        
+        .logo-text {
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-top: 10px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .dashboard {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 20px;
+        }
+        
+        .section {
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #1a237e;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            color: #1a237e;
+            margin-top: 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #e8eaf6;
+            padding-bottom: 10px;
+        }
+        
+        .upload-box {
+            border: 2px dashed #9fa8da;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px 0;
+            background: #f8f9ff;
+            transition: all 0.3s ease;
+        }
+        
+        .upload-box:hover {
+            border-color: #1a237e;
+            background: #fff;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #1a237e, #3949ab);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(25, 118, 210, 0.4);
+        }
+        
+        .btn-camera {
+            background: linear-gradient(135deg, #d32f2f, #b71c1c);
+        }
+        
+        .camera-feed {
+            width: 100%;
+            height: 350px;
+            background: #e8eaf6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #9fa8da;
+        }
+        
+        .results {
+            margin-top: 25px;
+            padding: 20px;
+            background: #e8f4f8;
+            border-radius: 10px;
+            border-left: 5px solid #2196f3;
+            font-size: 1.1em;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #0d47a1, #1a237e);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        .team-members {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .team-members p {
+            margin: 8px 0;
+            font-size: 0.95em;
+            color: #e3f2fd;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Indian_Institute_of_Technology%2C_Patna.svg/375px-Indian_Institute_of_Technology%2C_Patna.svg.png" alt="IIT Patna Logo">
+            <div class="logo-text">Capstone Project Group 83</div>
+        </div>
+        <h1>Automatic Licence Number Plate Recognition System</h1>
+    </div>
+    
+    <div class="container">
+        <div class="dashboard">
+            <div class="section">
+                <h2>Image Upload</h2>
+                <p>Upload an image containing a license plate for recognition</p>
+                
+                <form action="/detections" method="post" enctype="multipart/form-data">
+                    <div class="upload-box">
+                        <p>Drag & drop an image file here or click to browse</p>
+                        <input type="file" name="image" accept="image/*" required>
+                    </div>
+                    <button type="submit" class="btn">Process Image</button>
+                </form>
+            </div>
+            
+            <div class="section">
+                <h2>Real-time Camera</h2>
+                <p>Use your camera for real-time license plate recognition</p>
+                
+                <div class="camera-feed">
+                    <p>Camera feed will appear here when activated</p>
+                </div>
+                
+                <form action="/start_camera" method="post">
+                    <button type="submit" class="btn btn-camera">Start Camera</button>
+                </form>
+                <form action="/stop_camera" method="post">
+                    <button type="submit" class="btn">Stop Camera</button>
+                </form>
+            </div>
+            
+            <div class="section">
+                <h2>Recognition Results</h2>
+                <div class="results">
+                    <p>License plate recognition results will appear here</p>
+                    <!-- This will be populated by the backend -->
+                    {% if results %}
+    <p><strong>Detected Plate:</strong> {{ results }}</p>
+{% endif %}
+
+{% if live_result %}
+    <p><strong>Live Camera Detection:</strong> {{ live_result }}</p>
+{% endif %}
+
+{% if image_url %}
+    <img src="{{ image_url }}" alt="Uploaded Image" width="300">
+{% endif %}
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Capstone Project by group no. 83</p>
+        <div class="team-members">
+            <p>Ankit Kumar Singh</p>
+            <p>Aman Kumar Singh</p>
+            <p>Ayush Kumar Singh</p>
+            <p>Bablu Kumar Singh</p>
+            <p>Ayush Kumar Singh</p>
+        </div>
+    </div>
+</body>
+</html>
