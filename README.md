@@ -83,10 +83,10 @@ Then open `http://127.0.0.1:5000` in your browser.
 Thanks to the team members who made this project possible:
 
 - [Ankit Kumar Singh](https://github.com/Ankit-IITP) — *Lead Developer, Frontend, Backend, Model Integration*
-- Aman Kumar Singh — *Image Processing, OCR Testing*
-- Ayush Kumar Singh — *Core Developer, Debugger, Documentation, Dataset Management*
-- Bablu Kumar Singh — *UI/UX, Report Writing*
-- Ayush Kumar Singh - *Research analyst*
+- [Aman Kumar Singh](https://github.com/iitpaman) *Image Processing, OCR Testing*
+- [Ayush Kumar Singh](https://github.com/ayushsinh5) — *Core Developer, Debugger, Documentation, Dataset Management*
+- [Bablu Kumar Singh] — https://github.com/*UI/UX, Report Writing*
+- [Ayush Kumar Singh] -https://github.com/ *Research analyst*
 
 ## 📄 License
 
