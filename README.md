@@ -84,7 +84,7 @@ Thanks to the team members who made this project possible:
 
 - [Ankit Kumar Singh](https://github.com/Ankit-IITP) — *Lead Developer, Frontend, Backend, Model Integration*
 - [Aman Kumar Singh](https://github.com/iitpaman) *Image Processing, OCR Testing*
-- [Ayush Kumar Singh](https://github.com/ayushsinh5) — *Core Developer, Debugger, Documentation, Dataset Management*
+- [Ayush Kumar Singh](https://github.com/ayushsinh05) — *Core Developer, Debugger, Documentation, Dataset Management*
 - [Bablu Kumar Singh] — https://github.com/*UI/UX, Report Writing*
 - [Ayush Kumar Singh] -https://github.com/ *Research analyst*
 
